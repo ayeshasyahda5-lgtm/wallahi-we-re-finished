@@ -46,3 +46,15 @@ ax2.set_title("Box Plot PDB / Inflasi / IHSG")
 ax2.set_xticklabels(["PDB","Inflasi","IHSG"])
 st.pyplot(fig2)
 
+st.markdown(
+    """
+    Box plot pada gambar menampilkan distribusi tiga variabel ekonomi yaitu PDB, Inflasi, dan IHSG. Dari grafik tersebut terlihat bahwa:
+
+PDB memiliki persebaran nilai yang paling besar, dengan jarak antar kuartil yang lebar serta beberapa outlier pada bagian atas. Hal ini menunjukkan bahwa variasi PDB dari periode ke periode relatif tinggi dan terdapat beberapa tahun dengan nilai yang jauh lebih tinggi dari kondisi normal. Meski demikian, sebagian besar data PDB tetap terkonsentrasi pada rentang tertentu, menandakan adanya kestabilan dasar dalam pertumbuhan ekonomi.
+
+Inflasi memiliki persebaran yang paling kecil, terlihat dari box yang sangat pendek. Ini menunjukkan bahwa nilai inflasi relatif stabil dan tidak mengalami variasi besar. Meskipun terdapat outlier kecil, secara keseluruhan inflasi bergerak dalam rentang yang sempit, mencerminkan kondisi harga yang relatif terjaga.
+
+IHSG menunjukkan variasi sedang, berada di antara PDB dan inflasi. Terdapat beberapa outlier yang menunjukkan pergerakan pasar saham yang lebih volatil pada periode tertentu. Namun, rentang interkuartilnya cukup stabil, menunjukkan bahwa sebagian besar nilai IHSG terkonsentrasi dalam kisaran yang relatif konsisten.
+
+    """
+)
