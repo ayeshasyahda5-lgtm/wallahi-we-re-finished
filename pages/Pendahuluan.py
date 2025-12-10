@@ -3,14 +3,50 @@ import streamlit as st
 st.title("Dataset Saham Indonesia✦")
 st.write("##### Anggota Kelompok ฅ^>⩊<^ฅ =")
 st.write("- Ayesha Syahda Ardiningrum")
-st.write("- Fitrianisa Nabila")
-st.write("- Helmi Sulfa Yulidia wati")
+st.write("- Fitriannisaa Nabila")
+st.write("- Helmi Sulfa Yulidiawati")
 st.write("- Ade Febriani")
 
 st.write("### Pendahuluan")
 
 st.markdown(
     """
-    Pasar modal Indonesia memiliki peran yang sangat penting dalam mendukung pertumbuhan ekonomi nasional. Indeks Harga Saham Gabungan (IHSG) menjadi indikator utama yang mencerminkan kinerja pasar saham Indonesia secara keseluruhan. Dengan semakin meningkatnya minat terhadap analisis pasar, kebutuhan akan data historis yang lengkap dan dapat diolah menjadi sangat penting, baik bagi investor, peneliti, maupun akademisi. Dataset Indonesia Stock Dataset (IHSGStockData) yang disediakan oleh pengguna Kaggle muamkh menjadi salah satu sumber data terbuka yang menyediakan rekaman harga saham berbagai emiten yang tergabung dalam IHSG. Dataset ini memberi kesempatan luas bagi pengguna untuk melakukan analisis tren, pengukuran volatilitas, analisis risiko, dan bahkan pemodelan prediktif menggunakan pendekatan statistik maupun machine learning. Oleh karena itu, penelitian berbasis dataset ini dapat memberikan gambaran mengenai pola pergerakan harga saham dan karakteristik pasar modal Indonesia.
+    Analisis data ekonomi merupakan langkah penting untuk memahami bagaimana indikator makroekonomi berperan dalam menggambarkan kondisi suatu negara. Dalam konteks Indonesia, tiga indikator utama yang sangat sering digunakan adalah Produk Domestik Bruto (PDB), Inflasi, dan Indeks Harga Saham Gabungan (IHSG).
+
+- PDB menunjukkan total nilai produksi barang dan jasa dalam sebuah negara.
+
+- Inflasi mencerminkan tingkat perubahan harga secara umum.
+
+- IHSG menggambarkan kinerja pasar saham Indonesia secara keseluruhan.
+
+Ketiga indikator ini saling berkaitan dan bersama-sama dapat memberikan gambaran mengenai stabilitas serta pertumbuhan ekonomi. Oleh karena itu, penelitian ini bertujuan untuk melakukan visualisasi serta analisis distribusi masing-masing variabel sehingga dapat diketahui pola dan karakteristiknya.
+
+    """
+)
+
+st.write("### Deskripsi Data")
+
+st.markdown(
+    """
+    Tahun (2010–2024)
+Data tahun tidak berurutan karena diambil secara acak, tetapi tetap berada dalam rentang 2010 sampai 2024. Variabel ini berfungsi sebagai konteks waktu terhadap data ekonomi.
+    """
+)
+st.markdown(
+    """
+    PDB
+Nilai PDB dalam dataset berada di sekitar kisaran 10.000–14.000, menunjukkan variasi ekonomi yang cukup luas. Nilai ini merupakan angka simulasi yang menyerupai pola pertumbuhan ekonomi Indonesia.
+    """
+)
+st.markdown(
+    """
+   Inflasi (%)
+Inflasi berada pada kisaran 2% – 5%, mencerminkan kondisi stabil dan realistis sebagaimana rata-rata inflasi Indonesia dalam 10 tahun terakhir.
+    """
+)
+st.markdown(
+    """
+  IHSG
+Nilai IHSG berada di rentang 6.000–7.500, yang merepresentasikan pergerakan umum pasar saham Indonesia.
     """
 )
