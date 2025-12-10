@@ -33,25 +33,25 @@ st.markdown(
 )
 st.markdown(
     """
-    Tahun (2010–2024)
+   - Tahun (2010–2024)
 Data tahun tidak berurutan karena diambil secara acak, tetapi tetap berada dalam rentang 2010 sampai 2024. Variabel ini berfungsi sebagai konteks waktu terhadap data ekonomi.
     """
 )
 st.markdown(
     """
-    PDB
+   - PDB
 Nilai PDB dalam dataset berada di sekitar kisaran 10.000–14.000, menunjukkan variasi ekonomi yang cukup luas. Nilai ini merupakan angka simulasi yang menyerupai pola pertumbuhan ekonomi Indonesia.
     """
 )
 st.markdown(
     """
-   Inflasi (%)
+  - Inflasi (%)
 Inflasi berada pada kisaran 2% – 5%, mencerminkan kondisi stabil dan realistis sebagaimana rata-rata inflasi Indonesia dalam 10 tahun terakhir.
     """
 )
 st.markdown(
     """
-  IHSG
+ - IHSG
 Nilai IHSG berada di rentang 6.000–7.500, yang merepresentasikan pergerakan umum pasar saham Indonesia.
     """
 )
