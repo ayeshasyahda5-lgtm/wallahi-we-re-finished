@@ -28,6 +28,11 @@ st.write("### Deskripsi Data")
 
 st.markdown(
     """
+    Dataset yang dianalisis terdiri dari 300 baris data dengan empat variabel utama:
+    """
+)
+st.markdown(
+    """
     Tahun (2010–2024)
 Data tahun tidak berurutan karena diambil secara acak, tetapi tetap berada dalam rentang 2010 sampai 2024. Variabel ini berfungsi sebagai konteks waktu terhadap data ekonomi.
     """
