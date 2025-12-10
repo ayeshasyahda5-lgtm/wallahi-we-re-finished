@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.write("### kesimpulan")
+st.write("### Kesimpulan")
 
 st.markdown(
     """
