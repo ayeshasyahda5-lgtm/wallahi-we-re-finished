@@ -31,6 +31,7 @@ import seaborn as sns
 
 # Load data
 df = pd.read_csv("data_ekonomi.csv")
+<<<<<<< HEAD
 
 st.subheader("Preview Data")
 st.dataframe(df)
@@ -56,3 +57,20 @@ IHSG menunjukkan variasi sedang, berada di antara PDB dan inflasi. Terdapat bebe
 
     """
 )
+=======
+
+st.title("Visualisasi Data Ekonomi — Scatter & Box Plot")
+
+st.subheader("Preview Data")
+st.dataframe(df)
+
+
+# Box plot: Distribusi Inflasi, PDB, IHSG
+st.subheader("Box Plot — Distribusi Variabel Numerik")
+fig2, ax2 = plt.subplots(figsize=(6,4))
+sns.boxplot(data=df[["PDB","Inflasi","IHSG"]], ax=ax2)
+ax2.set_title("Box Plot PDB / Inflasi / IHSG")
+ax2.set_xticklabels(["PDB","Inflasi","IHSG"])
+st.pyplot(fig2)
+
+>>>>>>> 20c590b4f77e1989fa1d2fe23251ffbf2e893b4f
