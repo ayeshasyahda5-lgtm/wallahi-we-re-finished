@@ -3,7 +3,7 @@ import streamlit as st
 st.title("Dataset Saham Indonesia✦")
 st.write("##### Anggota Kelompok ฅ^>⩊<^ฅ =")
 st.write("- Ayesha Syahda Ardiningrum")
-st.write("- Fitrianisa Nabila")
+st.write("- Fitriannisaa Nabila")
 st.write("- Helmi Sulfa Yulidiawati")
 st.write("- Ade Febriani")
 
