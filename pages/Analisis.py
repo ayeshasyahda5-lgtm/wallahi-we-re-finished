@@ -1,4 +1,12 @@
 import streamlit as st
 
-st.title("Settings")
-st.write("This page alloes allows you to customize your preferences.")
+st.title("Analisis Data")
+st.write("### Berikut adalah hasil Analisis data kami: ")
+
+st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
+
+st.markdown(
+    """
+  
+    """
+)
