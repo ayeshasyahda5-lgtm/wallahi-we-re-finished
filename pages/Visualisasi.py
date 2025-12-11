@@ -32,8 +32,6 @@ import seaborn as sns
 # Load data
 df = pd.read_csv("data_ekonomi.csv")
 
-st.title("Visualisasi Data Ekonomi — Scatter & Box Plot")
-
 st.subheader("Preview Data")
 st.dataframe(df)
 
