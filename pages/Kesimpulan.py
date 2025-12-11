@@ -12,14 +12,10 @@ st.write("###  Referensi / Daftar Pustaka")
 
 st.markdown(
     """
-    Badan Pusat Statistik. (2024). Statistik Ekonomi Indonesia.
+   Kaggle, 2023. https://www.kaggle.com/datasets/muamkh/ihsgstockdata
     """
 )
-st.markdown(
-    """
-    Bank Indonesia. (2024). Laporan Perekonomian Indonesia.
-    """
-)
+
 
 
 
