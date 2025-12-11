@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.title("Settings")
+st.title("Analisis Data")
 st.write("This page alloes allows you to customize your preferences.")
