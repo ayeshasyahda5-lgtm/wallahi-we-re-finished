@@ -1,39 +1,27 @@
 import streamlit as st
 
-st.write("### Kesimpulan")
+st.write("### kesimpulan")
+
+st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
 
 st.markdown(
     """
-    Dataset IHSGStockData dari Kaggle merupakan sumber data yang kaya dan fleksibel untuk berbagai jenis analisis pasar modal. Dengan struktur data yang lengkap dan frekuensi waktu yang beragam, dataset ini dapat digunakan untuk memahami tren pergerakan harga saham, mengukur volatilitas, membangun model risiko, hingga memprediksi harga menggunakan metode statistika maupun machine learning. Visualisasi dan analisis dasar menunjukkan bahwa pasar Indonesia memiliki dinamika yang kompleks dengan karakteristik volatilitas yang dapat berubah-ubah mengikuti kondisi ekonomi. Korelasi antar saham juga memberikan wawasan penting bagi investor yang ingin membangun portofolio yang efisien. Secara keseluruhan, dataset ini sangat bermanfaat untuk penelitian akademik, studi pasar, serta eksperimen terhadap strategi investasi.
+    Dari analisis yang telah dilakukan dapat disimpulkan bahwa data ekonomi yang dianalisis menunjukkan pola yang stabil namun tetap dinamis dalam beberapa aspek. PDB memiliki rentang sebaran yang luas yang menegaskan bahwa pertumbuhan ekonomi mengalami perubahan yang cukup signifikan pada beberapa tahun tertentu. Inflasi menunjukkan tingkat kestabilan yang tinggi, sejalan dengan kondisi inflasi Indonesia pada dekade terakhir yang cenderung terkendali. IHSG memperlihatkan variasi yang moderat, mencerminkan keadaan pasar saham yang fluktuatif tetapi tidak terlalu ekstrem. Visualisasi melalui box plot membantu memberikan pemahaman yang lebih jelas mengenai karakteristik distribusi masing-masing variabel sehingga analisis lanjutan seperti hubungan antarvariabel atau prediksi dapat dilakukan dengan lebih terarah. Secara keseluruhan, hasil penelitian ini memberikan gambaran awal yang cukup kuat mengenai stabilitas dan dinamika indikator ekonomi Indonesia.
     """
 )
+
+st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
 
 st.write("###  Referensi / Daftar Pustaka")
 
 st.markdown(
     """
-    Dataset Saham Indonesia (IHSGStockData) — Kaggle, oleh muamkh.
+    Badan Pusat Statistik. (2024). Statistik Ekonomi Indonesia.
     """
 )
 st.markdown(
     """
-    Investopedia — Moving Average, Technical Analysis, dan definisi Volatility.
+    Bank Indonesia. (2024). Laporan Perekonomian Indonesia.
     """
 )
-st.markdown(
-    """
-   Makalah dan artikel terkait penggunaan LSTM untuk prediksi harga saham Indonesia.
-    """
-)
-st.markdown(
-    """
-  Sumber data harga saham publik seperti Yahoo Finance (sebagai rujukan teknis format data).
-    """
-)
-
-
-
-
-
-
 
