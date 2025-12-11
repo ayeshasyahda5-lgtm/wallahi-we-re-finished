@@ -18,7 +18,7 @@ st.plotly_chart(fig)
 
 st.markdown(
     """
-  Jadi berdasarkan yang ini
+  Jadi distribusi LastPrice terlihat jelas lebih dominan miring ke kiri yang artinya kebanyakan perusahaan justru punya harga saham yang cukup tinggi, sementara yang harganya rendah hanya sedikit. Batangnya lebih menumpuk di sisi kanan grafik, lalu makin tipis ke arah kiri. Secara sederhana, grafik ini menunjukkan bahwa di kumpulan data ini, perusahaan berharga saham tinggi jauh lebih banyak dibandingkan yang murah.
     """
 )
 
@@ -37,10 +37,10 @@ st.markdown(
     """
 )
 
-st.write("## Data Chart Last Price: ")
+st.write("## Data Chart Listing Board: ")
 fig = px.pie(df_Saham,
              names="ListingBoard",
-             title="Proporsi Saham per Listing Board")
+             title="Proporsi Saham per ListingBoard")
 
 st.plotly_chart(fig, use_container_width=True)
 
