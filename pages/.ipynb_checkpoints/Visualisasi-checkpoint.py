@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import streamlit as st
-import plotly.express as px
-import numpy as np
-import matplotlib.pyplot as plt
-
-st.title("Data Visualization")
-
-#Generate same data
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-#Plot data
-fig, ax = plt.subplots()
-ax.plot(x, y)
-# Display the plot
-st.pyplot(fig)
-=======
 import pandas as pd
 import seaborn as sns
 import plotly.express as px
@@ -25,6 +8,8 @@ df_Saham = pd.read_csv("DaftarSahamm.csv", sep=';', on_bad_lines='skip')
 st.write("## Preview data: ")
 st.dataframe(df_Saham.head())
 st.dataframe(df_Saham.tail())
+
+st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
 
 st.write("## Data Chart Last Price: ")
 fig=px.histogram(
@@ -39,6 +24,8 @@ st.markdown(
     """
 )
 
+st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
+
 st.write("## Data Bar Last Price: ")
 fig = px.bar(df_Saham,
              x="Name",
@@ -50,9 +37,11 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.markdown(
     """
-  Jadi berdasarkan itu
+    Berdasarkan grafik Shares, terlihat bahwa jumlah saham tiap perusahaan memang bervariasi cukup besar. Sebagian besar perusahaan berada pada kisaran jumlah saham yang menengah, sementara hanya sedikit yang memiliki jumlah saham sangat tinggi hingga tampak menonjol sebagai outlier. Perbedaan ini wajar karena tiap perusahaan punya kebutuhan modal dan skala bisnis yang berbeda. Secara sederhana, grafik ini menunjukkan bahwa mayoritas emiten bergerak dengan kapasitas yang relatif stabil, sementara beberapa perusahaan besar menjadi “penarik rentang” data karena ukuran sahamnya yang jauh lebih besar.
     """
 )
+
+st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
 
 st.write("## Data Chart Listing Board: ")
 fig = px.pie(df_Saham,
@@ -63,7 +52,6 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.markdown(
     """
-  Jadi berdasarkan ini
+    Dapat terlihat dari diagram pie di atas ini menunjukkan bahwa sebagian besar perusahaan tercatat di **Papan Pengembangan** dan **Papan Utama**, yang bersama-sama mendominasi hampir seluruh proporsi data. Sementara itu, **Papan Akselerasi** hanya ditempati sedikit perusahaan sehingga porsinya tampak sangat kecil. Gambaran ini wajar karena banyak perusahaan sudah berada pada tahap bisnis yang lebih stabil atau sedang berkembang, sedangkan hanya sebagian kecil yang masih berada pada fase awal. Secara sederhana, grafik ini menunjukan bahwa mayoritas emiten kini “bermain” di level yang lebih matang, sementara beberapa lainnya masih berada di tahap percepatan menuju pertumbuhan yang lebih besar.
     """
 )
->>>>>>> f00fdec2c09c91a2c407e03c93f20b715a0d149f

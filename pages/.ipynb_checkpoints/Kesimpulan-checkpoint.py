@@ -20,7 +20,7 @@ st.markdown(
     """
 )
 
-
+st.write("###  Thank You! (*ᴗ͈ˬᴗ͈)ꕤ*.ﾟ")
 
 
 
