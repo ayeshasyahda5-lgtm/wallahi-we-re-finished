@@ -24,4 +24,11 @@ st.markdown(
     Bank Indonesia. (2024). Laporan Perekonomian Indonesia.
     """
 )
+st.markdown(
+    """
+(づ｡◕‿‿◕｡)づ  💛
+Thank youuu!!
+
+           """
+)
 
