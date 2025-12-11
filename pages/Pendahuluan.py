@@ -13,15 +13,9 @@ st.write("### Pendahuluan")
 
 st.markdown(
     """
-    Analisis data ekonomi merupakan langkah penting untuk memahami bagaimana indikator makroekonomi berperan dalam menggambarkan kondisi suatu negara. Dalam konteks Indonesia, tiga indikator utama yang sangat sering digunakan adalah Produk Domestik Bruto (PDB), Inflasi, dan Indeks Harga Saham Gabungan (IHSG).
+    Dataset saham yang digunakan dalam penelitian atau proyek ini berisi daftar perusahaan publik di Indonesia lengkap dengan atribut seperti kode emiten, nama perusahaan, jumlah saham beredar (shares), kategori papan pencatatan, hingga harga penutupan terakhir (LastPrice). Informasi-informasi tersebut memberikan gambaran awal mengenai kondisi masing-masing perusahaan serta memungkinkan berbagai jenis analisis, mulai dari distribusi harga saham, perbedaan karakter perusahaan berdasarkan papan pencatatan, hingga pola pergerakan saham secara umum.
 
-- PDB menunjukkan total nilai produksi barang dan jasa dalam sebuah negara.
-
-- Inflasi mencerminkan tingkat perubahan harga secara umum.
-
-- IHSG menggambarkan kinerja pasar saham Indonesia secara keseluruhan.
-
-Ketiga indikator ini saling berkaitan dan bersama-sama dapat memberikan gambaran mengenai stabilitas serta pertumbuhan ekonomi. Oleh karena itu, penelitian ini bertujuan untuk melakukan visualisasi serta analisis distribusi masing-masing variabel sehingga dapat diketahui pola dan karakteristiknya.
+Dengan pendekatan visualisasi dan analisis data, dataset ini tidak hanya membantu menggambarkan struktur pasar secara lebih jelas, tetapi juga memudahkan pembaca—baik akademisi, praktisi, maupun pemula di dunia pasar modal—untuk memahami bagaimana penyebaran harga dan karakteristik emiten di Indonesia. Pendekatan yang lebih sederhana namun tetap sistematis diharapkan dapat menjembatani analisis akademis dengan interpretasi yang mudah dipahami dan relevan bagi banyak kalangan.
 
     """
 )
