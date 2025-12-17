@@ -20,7 +20,7 @@ st.plotly_chart(fig)
 
 st.markdown(
     """
-  Jadi distribusi LastPrice terlihat jelas lebih dominan miring ke kiri yang artinya kebanyakan perusahaan justru punya harga saham yang cukup tinggi, sementara yang harganya rendah hanya sedikit. Batangnya lebih menumpuk di sisi kanan grafik, lalu makin tipis ke arah kiri. Secara sederhana, grafik ini menunjukkan bahwa di kumpulan data ini, perusahaan berharga saham tinggi jauh lebih banyak dibandingkan yang murah.
+  Jadi distribusi LastPrice terlihat jelas lebih dominan miring ke kiri yang artinya kebanyakan perusahaan justru punya harga saham yang tergolong tinggi, sementara itu saham dengan harga rendah hanya sedikit. Batangnya lebih menumpuk di sisi kanan grafik, lalu makin tipis ke arah kiri. Secara sederhana, grafik ini menunjukkan bahwa di kumpulan data ini, perusahaan berharga saham tinggi jauh lebih banyak dibandingkan yang murah(rendah).
     """
 )
 
@@ -52,6 +52,6 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.markdown(
     """
-    Dapat terlihat dari diagram pie di atas ini menunjukkan bahwa sebagian besar perusahaan tercatat di **Papan Pengembangan** dan **Papan Utama**, yang bersama-sama mendominasi hampir seluruh proporsi data. Sementara itu, **Papan Akselerasi** hanya ditempati sedikit perusahaan sehingga porsinya tampak sangat kecil. Gambaran ini wajar karena banyak perusahaan sudah berada pada tahap bisnis yang lebih stabil atau sedang berkembang, sedangkan hanya sebagian kecil yang masih berada pada fase awal. Secara sederhana, grafik ini menunjukan bahwa mayoritas emiten kini “bermain” di level yang lebih matang, sementara beberapa lainnya masih berada di tahap percepatan menuju pertumbuhan yang lebih besar.
+    Dapat terlihat dari diagram pie di atas ini menunjukkan bahwa sebagian besar perusahaan tercatat di **Papan Pengembangan** dan **Papan Utama**, yang bersama-sama mendominasi hampir seluruh proporsi data. Sementara itu, **Papan Akselerasi** hanya ditempati beberapa perusahaan sehingga porsinya tampak sangat sedikit. Gambaran ini wajar karena banyak perusahaan dengan bisnis yang sudah lebih stabil atau sedang berkembang, sedangkan hanya sebagian kecil yang masih berada pada fase awal. Secara sederhana, grafik ini menunjukan bahwa mayoritas emiten kini “bermain” di level yang lebih matang, sementara beberapa lainnya masih berada di tahap percepatan menuju pertumbuhan yang lebih besar.
     """
 )
