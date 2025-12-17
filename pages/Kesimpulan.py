@@ -10,7 +10,7 @@ st.markdown(
     """
 )
 
-st.write("###  Referensi / Daftar Pustaka")
+st.write("### Sumber Data")
 
 st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
 
