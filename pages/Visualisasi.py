@@ -30,14 +30,14 @@ st.write("## Data Bar Last Price: ")
 fig = px.bar(df_Saham,
              x="Name",
              y="LastPrice",
-             title="Distribusi Jumlah Shares per Perusahaan",
+             title="Distribusi Jumlah LastPrice per Perusahaan",
              color="LastPrice")
 
 st.plotly_chart(fig, use_container_width=True)
 
 st.markdown(
     """
-    Berdasarkan bar chart variabel Shares, terlihat bahwa jumlah saham tiap perusahaan memang bervariasi cukup besar. Sebagian besar perusahaan berada pada kisaran jumlah saham yang menengah, sementara hanya sedikit yang memiliki jumlah saham sangat tinggi hingga tampak menonjol sebagai outlier. Perbedaan ini wajar karena tiap perusahaan punya kebutuhan modal dan skala bisnis yang berbeda. Secara sederhana, grafik ini menunjukkan bahwa mayoritas emiten bergerak dengan kapasitas yang relatif stabil, sementara beberapa perusahaan besar menjadi “penarik rentang” data karena ukuran sahamnya yang jauh lebih besar.
+    Berdasarkan bar chart variabel LastPrice, terlihat bahwa jumlah saham tiap perusahaan memang bervariasi cukup besar. Sebagian besar perusahaan berada pada kisaran jumlah saham yang menengah, sementara hanya sedikit yang memiliki jumlah saham sangat tinggi hingga tampak menonjol sebagai outlier. Perbedaan ini wajar karena tiap perusahaan punya kebutuhan modal dan skala bisnis yang berbeda. Secara sederhana, grafik ini menunjukkan bahwa mayoritas emiten bergerak dengan kapasitas yang relatif stabil, sementara beberapa perusahaan besar menjadi “penarik rentang” data karena ukuran sahamnya yang jauh lebih besar.
     """
 )
 

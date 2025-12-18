@@ -20,7 +20,7 @@ st.plotly_chart(fig)
 
 st.markdown(
     """
-  Jadi distribusi LastPrice terlihat jelas lebih dominan miring ke kiri yang artinya kebanyakan perusahaan justru punya harga saham yang tergolong tinggi, sementara itu saham dengan harga rendah hanya sedikit. Batangnya lebih menumpuk di sisi kanan grafik, lalu makin tipis ke arah kiri. Secara sederhana, grafik ini menunjukkan bahwa di kumpulan data ini, perusahaan berharga saham tinggi jauh lebih banyak dibandingkan yang murah(rendah).
+  Dari hasil grafik bar untuk variabel LastPrice di atas terlihat jelas lebih dominan miring ke kiri yang artinya kebanyakan perusahaan justru punya harga saham yang tergolong tinggi, sementara itu saham dengan harga rendah hanya sedikit. Batangnya lebih menumpuk di sisi kanan grafik, lalu makin tipis ke arah kiri. Secara sederhana, grafik ini menunjukkan bahwa di kumpulan data ini, perusahaan berharga saham tinggi jauh lebih banyak dibandingkan yang murah(rendah).
     """
 )
 
@@ -30,14 +30,14 @@ st.write("## Data Bar Last Price: ")
 fig = px.bar(df_Saham,
              x="Name",
              y="LastPrice",
-             title="Distribusi Jumlah Shares per Perusahaan",
+             title="Distribusi Jumlah LastPrice per Perusahaan",
              color="LastPrice")
 
 st.plotly_chart(fig, use_container_width=True)
 
 st.markdown(
     """
-    Berdasarkan grafik Shares, terlihat bahwa jumlah saham tiap perusahaan memang bervariasi cukup besar. Sebagian besar perusahaan berada pada kisaran jumlah saham yang menengah, sementara hanya sedikit yang memiliki jumlah saham sangat tinggi hingga tampak menonjol sebagai outlier. Perbedaan ini wajar karena tiap perusahaan punya kebutuhan modal dan skala bisnis yang berbeda. Secara sederhana, grafik ini menunjukkan bahwa mayoritas emiten bergerak dengan kapasitas yang relatif stabil, sementara beberapa perusahaan besar menjadi “penarik rentang” data karena ukuran sahamnya yang jauh lebih besar.
+    Berdasarkan bar chart variabel LastPrice, terlihat bahwa jumlah saham tiap perusahaan memang bervariasi cukup besar. Sebagian besar perusahaan berada pada kisaran jumlah saham yang menengah, sementara hanya sedikit yang memiliki jumlah saham sangat tinggi hingga tampak menonjol sebagai outlier. Perbedaan ini wajar karena tiap perusahaan punya kebutuhan modal dan skala bisnis yang berbeda. Secara sederhana, grafik ini menunjukkan bahwa mayoritas emiten bergerak dengan kapasitas yang relatif stabil, sementara beberapa perusahaan besar menjadi “penarik rentang” data karena ukuran sahamnya yang jauh lebih besar.
     """
 )
 
