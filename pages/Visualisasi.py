@@ -14,8 +14,8 @@ st.write("────────────────────⋆⋅☆�
 st.write("## Data Chart Open Price: ")
 fig=px.histogram(
     df_Saham,
-    x='Open Price',
-    y='Nama Perusahaan',
+    x='Nama Perusahaan',
+    y='Open Price',
 )
 st.plotly_chart(fig)
 
