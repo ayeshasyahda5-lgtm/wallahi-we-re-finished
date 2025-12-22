@@ -3,7 +3,7 @@ import seaborn as sns
 import plotly.express as px
 import streamlit as st
 
-df_Saham = pd.read_csv("DaftarSahamm.csv", sep=';', on_bad_lines='skip')
+df_Saham = pd.read_csv("Ringkasan Saham-20251222.csv", sep=';', on_bad_lines='skip')
 
 st.write("## Preview data: ")
 st.dataframe(df_Saham.head())
@@ -11,10 +11,11 @@ st.dataframe(df_Saham.tail())
 
 st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
 
-st.write("## Data Chart Last Price: ")
+st.write("## Data Chart Open Price: ")
 fig=px.histogram(
     df_Saham,
-    x='LastPrice',
+    x='Open Price',
+    y='Nama Perusahaan',
 )
 st.plotly_chart(fig)
 
@@ -26,11 +27,11 @@ st.markdown(
 
 st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
 
-st.write("## Data Bar Last Price: ")
+st.write("## Data Bar Open Price: ")
 fig = px.bar(df_Saham,
-             x="Name",
-             y="LastPrice",
-             title="Distribusi Jumlah LastPrice per Perusahaan",
+             x="Nama Perusahaan",
+             y="Open Price",
+             title="Distribusi Harga Terbuka per Perusahaan",
              color="LastPrice")
 
 st.plotly_chart(fig, use_container_width=True)
