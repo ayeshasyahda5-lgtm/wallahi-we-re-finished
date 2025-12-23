@@ -42,45 +42,18 @@ ticker_symbol = st.selectbox(
     sorted(df_Saham['Kode Saham'].astype(str).str.strip().unique())
 )
 
-df_Saham['Kode Saham'] = df_Saham['Kode Saham'].astype(str).str.strip()
-
 df_ticker = df_Saham[df_Saham['Kode Saham'] == ticker_symbol].copy()
-
-st.write("Jumlah data:", len(df_ticker)) 
-
 df_ticker = df_ticker.reset_index(drop=True)
 df_ticker['Observasi'] = df_ticker.index + 1
-df_melt = df_ticker.melt(
-    id_vars='Observasi',
-    value_vars=pilihan_atribut,
-    var_name='Variabel',
-    value_name='Harga'
-)
 
-grafik = px.line(
-    df_melt,
-    x='Observasi',
-    y='Harga',
-    color='Variabel',
-    title=f"Harga Saham {ticker_symbol}"
-)
+if st.checkbox("Tampilkan Grafik"):
 
-st.plotly_chart(grafik, use_container_width=True)
-
-if st.checkbox('Tampilkan grafik'):
     pilihan_atribut = st.multiselect(
-        'Select pilih atribut yang akan ditampilkan:',
-        ['Open Price', 'Tertinggi', 'Terendah', 'Penutupan']
+        "Pilih atribut harga:",
+        kolom_harga
     )
 
     if pilihan_atribut:
-        df['Kode Perusahaan'] = df['Kode Perusahaan'].astype(str).str.strip()
-        kolom_harga = ['Open Price', 'Tertinggi', 'Terendah', 'Penutupan']
-        df[kolom_harga] = df[kolom_harga].apply(pd.to_numeric, errors='coerce')
-
-        df_ticker = df[df['Kode Perusahaan'] == ticker_symbol].copy()
-        df_ticker = df_ticker.reset_index(drop=True)
-        df_ticker['Observasi'] = df_ticker.index + 1
 
         df_melt = df_ticker.melt(
             id_vars='Observasi',
@@ -89,7 +62,7 @@ if st.checkbox('Tampilkan grafik'):
             value_name='Harga'
         )
 
-        grafik = px.line(
+        fig = px.line(
             df_melt,
             x='Observasi',
             y='Harga',
@@ -97,6 +70,7 @@ if st.checkbox('Tampilkan grafik'):
             title=f"Harga Saham {ticker_symbol}"
         )
 
-        st.plotly_chart(grafik, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)
+
     else:
-        st.warning("Pilih minimal satu atribut.")
+        st.warning("Pilih minimal satu atribut harga.")
