@@ -2,6 +2,8 @@ import pandas as pd
 import seaborn as sns
 import plotly.express as px
 import streamlit as st
+import ipywidgets as widgets
+from IPython.display import display
 
 df_Saham = pd.read_csv("Ringkasan Saham-20251222.csv", sep=';', on_bad_lines='skip')
 
@@ -27,32 +29,40 @@ st.markdown(
 
 st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
 
-st.write("## Data Bar Open Price: ")
-fig = px.bar(df_Saham,
-             x="Nama Perusahaan",
-             y="Open Price",
-             title="Distribusi Harga Terbuka per Perusahaan",
-             color="LastPrice")
+st.write("## Tampilan data keseluruhan ")
 
-st.plotly_chart(fig, use_container_width=True)
-
-st.markdown(
-    """
-    Berdasarkan bar chart variabel LastPrice, terlihat bahwa jumlah saham tiap perusahaan memang bervariasi cukup besar. Sebagian besar perusahaan berada pada kisaran jumlah saham yang menengah, sementara hanya sedikit yang memiliki jumlah saham sangat tinggi hingga tampak menonjol sebagai outlier. Perbedaan ini wajar karena tiap perusahaan punya kebutuhan modal dan skala bisnis yang berbeda. Secara sederhana, grafik ini menunjukkan bahwa mayoritas emiten bergerak dengan kapasitas yang relatif stabil, sementara beberapa perusahaan besar menjadi “penarik rentang” data karena ukuran sahamnya yang jauh lebih besar.
-    """
+df = df.reset_index(drop=True)
+df['Observasi'] = df.index + 1
+dropdown_kode = widgets.Dropdown(
+    options=sorted(df['Kode Perusahaan'].unique()),
+    description='Kode Saham:',
+    value=sorted(df['Kode Perusahaan'].unique())[0]
 )
 
-st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
+def plot_multiline_no_date(kode):
+    data = df[df['Kode Perusahaan'] == kode]
 
-st.write("## Data Chart Listing Board: ")
-fig = px.pie(df_Saham,
-             names="ListingBoard",
-             title="Proporsi Saham per ListingBoard")
+    nama = data['Nama Perusahaan'].iloc[0]
 
-st.plotly_chart(fig, use_container_width=True)
+    plt.figure(figsize=(14,6))
 
-st.markdown(
-    """
-    Dapat terlihat dari diagram pie di atas ini menunjukkan bahwa sebagian besar perusahaan tercatat di **Papan Pengembangan** dan **Papan Utama**, yang bersama-sama mendominasi hampir seluruh proporsi data. Sementara itu, **Papan Akselerasi** hanya ditempati beberapa perusahaan sehingga porsinya tampak sangat sedikit. Gambaran ini wajar karena banyak perusahaan dengan bisnis yang sudah lebih stabil atau sedang berkembang, sedangkan hanya sebagian kecil yang masih berada pada fase awal. Secara sederhana, grafik ini menunjukan bahwa mayoritas emiten kini “bermain” di level yang lebih matang, sementara beberapa lainnya masih berada di tahap percepatan menuju pertumbuhan yang lebih besar.
-    """
+    plt.plot(data['Observasi'], data['Open Price'], label='Open Price')
+    plt.plot(data['Observasi'], data['Tertinggi'], label='High')
+    plt.plot(data['Observasi'], data['Terendah'], label='Low')
+    plt.plot(data['Observasi'], data['Penutupan'], label='Close')
+
+    plt.title(f"Perbandingan Harga Saham {nama} ({kode})")
+    plt.xlabel("Urutan Observasi")
+    plt.ylabel("Harga Saham")
+    plt.legend()
+    plt.grid(True)
+
+    plt.show()
+
+interactive_plot = widgets.interactive(
+    plot_multiline_no_date,
+    kode=dropdown_kode
 )
+
+display(interactive_plot)
+
