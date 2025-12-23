@@ -29,6 +29,22 @@ st.markdown(
 
 st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
 
+st.write("## Data Close Price ")
+fig=px.histogram(
+    df_Saham,
+    x='Nama Perusahaan',
+    y='Penutupan',
+)
+st.plotly_chart(fig)
+
+st.markdown(
+    """
+  Dari hasil grafik bar untuk variabel LastPrice di atas terlihat jelas lebih dominan miring ke kiri yang artinya kebanyakan perusahaan justru punya harga saham yang tergolong tinggi, sementara itu saham dengan harga rendah hanya sedikit. Batangnya lebih menumpuk di sisi kanan grafik, lalu makin tipis ke arah kiri. Secara sederhana, grafik ini menunjukkan bahwa di kumpulan data ini, perusahaan berharga saham tinggi jauh lebih banyak dibandingkan yang murah(rendah).
+    """
+)
+
+st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
+
 st.write("## Tampilan data keseluruhan ")
 
 
