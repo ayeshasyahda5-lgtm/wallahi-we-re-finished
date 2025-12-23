@@ -37,26 +37,18 @@ df_Saham['Kode Saham'] = df_Saham['Kode Saham'].astype(str).str.strip()
 kolom_harga = ['Open Price', 'Tertinggi', 'Terendah', 'Penutupan']
 df_Saham[kolom_harga] = df_Saham[kolom_harga].apply(pd.to_numeric, errors='coerce')
 
-ticker_symbol = st.selectbox(
-    "Pilih Kode Saham",
-    sorted(df_Saham['Kode Saham'].astype(str).str.strip().unique())
-)
-
-df_ticker = df_Saham[df_Saham['Kode Saham'] == ticker_symbol].copy()
-df_ticker = df_ticker.reset_index(drop=True)
-df_ticker['Observasi'] = df_ticker.index + 1
-
 if st.checkbox("Tampilkan Grafik"):
 
     pilihan_atribut = st.multiselect(
         "Pilih atribut harga:",
-        kolom_harga
+        kolom_harga,
+        default=kolom_harga
     )
 
     if pilihan_atribut:
 
-        df_melt = df_ticker.melt(
-            id_vars='Observasi',
+        df_melt = df_Saham.melt(
+            id_vars='Kode Saham',
             value_vars=pilihan_atribut,
             var_name='Variabel',
             value_name='Harga'
@@ -64,10 +56,16 @@ if st.checkbox("Tampilkan Grafik"):
 
         fig = px.line(
             df_melt,
-            x='Observasi',
+            x='Kode Saham',
             y='Harga',
             color='Variabel',
-            title=f"Harga Saham {ticker_symbol}"
+            markers=True,
+            title="Perbandingan Harga Saham Berdasarkan Kode Saham"
+        )
+
+        fig.update_layout(
+            xaxis_title="Kode Saham",
+            yaxis_title="Harga"
         )
 
         st.plotly_chart(fig, use_container_width=True)
