@@ -3,7 +3,7 @@ import seaborn as sns
 import plotly.express as px
 import streamlit as st
 import yfinance as yf
-from IPython.display import display
+
 
 df_Saham = pd.read_csv("Ringkasan Saham-20251222.csv", sep=';', on_bad_lines='skip')
 
