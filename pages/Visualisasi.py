@@ -35,7 +35,14 @@ st.write("## Tampilan data keseluruhan ")
 df_Saham['Kode Saham'] = df_Saham['Kode Saham'].astype(str).str.strip()
 
 kolom_harga = ['Open Price', 'Tertinggi', 'Terendah', 'Penutupan']
-df[kolom_harga] = df_Saham[kolom_harga].apply(pd.to_numeric, errors='coerce')
+df_Saham[kolom_harga] = df_Saham[kolom_harga].apply(pd.to_numeric, errors='coerce')
+
+ticker_symbol = st.selectbox(
+    "Pilih Kode Saham",
+    sorted(df_Saham['Kode Saham'].astype(str).str.strip().unique())
+)
+
+df_Saham['Kode Saham'] = df_Saham['Kode Saham'].astype(str).str.strip()
 
 df_ticker = df_Saham[df_Saham['Kode Saham'] == ticker_symbol].copy()
 
