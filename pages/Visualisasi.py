@@ -23,7 +23,9 @@ st.plotly_chart(fig)
 
 st.markdown(
     """
-  Dari hasil grafik bar untuk variabel Open Price di atas terlihat jelas lebih dominan miring ke kiri yang artinya kebanyakan perusahaan justru punya harga saham yang tergolong tinggi, sementara itu saham dengan harga rendah hanya sedikit. Batangnya lebih menumpuk di sisi kanan grafik, lalu makin tipis ke arah kiri. Secara sederhana, grafik ini menunjukkan bahwa di kumpulan data ini, perusahaan berharga saham tinggi jauh lebih banyak dibandingkan yang murah(rendah).
+    Dari hasil grafik bar yang menampilkan data harga pembukaan memperlihatkan perbedaan yang cukup mencolok pada nilai pembukaan antar berbagai perseroan. Sebagian besar perusahaan memperlihatkan harga pembukaan yang lumayan kecil, namun ada segelintir perusahaan yang terlihat memiliki harga pembukaan sangat tinggi. Kecenderungan ini menandakan bahwa situasi awal dalam transaksi saham tidak sama untuk setiap perusahaan.
+
+Perbedaan harga pembukaan ini menggambarkan beragam ekspektasi pasar di permulaan tiap hari transaksi. Perseroan dengan harga pembukaan tinggi umumnya merupakan entitas usaha yang lebih besar atau lebih dipercaya pasar, sedangkan yang harganya rendah cenderung menunjukkan kegiatan jual beli yang kurang intensif atau nilai sahamnya lebih kecil.
     """
 )
 
@@ -39,7 +41,9 @@ st.plotly_chart(fig)
 
 st.markdown(
     """
-  Dari hasil grafik bar untuk variabel Close Price di atas terlihat jelas lebih dominan miring ke kiri yang artinya kebanyakan perusahaan justru punya harga saham yang tergolong tinggi, sementara itu saham dengan harga rendah hanya sedikit. Batangnya lebih menumpuk di sisi kanan grafik, lalu makin tipis ke arah kiri. Secara sederhana, grafik ini menunjukkan bahwa di kumpulan data ini, perusahaan berharga saham tinggi jauh lebih banyak dibandingkan yang murah(rendah).
+  Dari hasil grafik bar harga penutupan memperlihatkan corak yang mirip dengan harga pembukaan, yaitu kebanyakan perseroan berkumpul pada angka harga yang rendah dan cuma segelintir yang memiliki harga penutupan tinggi. Hal ini menandakan bahwa di penghujung suatu transaksi, sebaran harga saham antar perusahaan masih didominasi oleh perseroan dengan harga yang kecil.
+
+Kesamaan pola antara harga pembukaan dan penutupan mengisyaratkan bahwa pergerakan harga selama satu hari transaksi tidak begitu drastis. Harga penutupan merefleksikan hasil akhir dari pertemuan antara minat beli dan jual sepanjang hari itu, sehingga bagan ini memberikan gambaran mengenai kedudukan akhir pasar bagi setiap perusahaan.
     """
 )
 
@@ -55,7 +59,9 @@ st.plotly_chart(fig)
 
 st.markdown(
     """
-  Dari hasil grafik bar untuk variabel High Price di atas terlihat jelas lebih dominan miring ke kiri yang artinya kebanyakan perusahaan justru punya harga saham yang tergolong tinggi, sementara itu saham dengan harga rendah hanya sedikit. Batangnya lebih menumpuk di sisi kanan grafik, lalu makin tipis ke arah kiri. Secara sederhana, grafik ini menunjukkan bahwa di kumpulan data ini, perusahaan berharga saham tinggi jauh lebih banyak dibandingkan yang murah(rendah).
+  Dari hasil grafik bar yang menampilkan harga paling tinggi menampakkan peningkatan nilai yang cukup besar pada beberapa perusahaan dibandingkan sisanya. Ada beberapa batang dalam bagan ini yang terlihat jauh menjulang, menandakan bahwa saham dari perusahaan tersebut melonjak harganya secara mencolok selama sesi transaksi berlangsung.
+
+Perubahan pada harga puncak ini merefleksikan beda minat pasar terhadap saham-saham tertentu. Perusahaan dengan nilai puncak yang tinggi menandakan bahwa sahamnya sangat diminati, meski tidak semua perusahaan mampu menjaga harga itu sampai pasar tutup.
     """
 )
 
@@ -71,7 +77,9 @@ st.plotly_chart(fig)
 
 st.markdown(
     """
-  Dari hasil grafik bar untuk variabel Low Price di atas terlihat jelas lebih dominan miring ke kiri yang artinya kebanyakan perusahaan justru punya harga saham yang tergolong tinggi, sementara itu saham dengan harga rendah hanya sedikit. Batangnya lebih menumpuk di sisi kanan grafik, lalu makin tipis ke arah kiri. Secara sederhana, grafik ini menunjukkan bahwa di kumpulan data ini, perusahaan berharga saham tinggi jauh lebih banyak dibandingkan yang murah(rendah).
+  Dari hasil grafik bar harga paling rendah menunjukkan batas minimal harga saham yang tercatat selama proses jual beli. Pola yang terlihat pada bagan ini memperlihatkan bahwa kebanyakan perusahaan punya harga dasar yang lumayan rendah dan nilainya berdekatan, sedangkan hanya segelintir perusahaan yang memperlihatkan nilai harga dasar yang lebih tinggi.
+
+Hal ini mengartikan bahwa tekanan jual atau penurunan harga lebih terasa pada perusahaan dengan nilai saham yang kecil. Sebaliknya, perusahaan yang harga dasarnya tetap tinggi cenderung memperlihatkan stabilitas harga yang lebih oke selama transaksi berlangsung.
     """
 )
 

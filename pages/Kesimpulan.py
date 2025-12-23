@@ -6,7 +6,11 @@ st.write("────────────────────⋆⋅☆�
 
 st.markdown(
     """
-    Melalui dashboard Streamlit ini, kita dapat menyimpulkan bahwa visualisasi data mampu menyederhanakan kompleksnya suatu data pasar modal menjadi insight yang bisa di amati dan ditindaklanjuti. Data menunjukkan bahwa pasar saham tidak hanya didominasi oleh satu tipe perusahaan saja. Ada keberagaman dari sisi skala bisnis (terlihat dari kategori papan), struktur permodalan (jumlah lembar saham), hingga valuasi pasar (harga saham). Bagi investor maupun analis, pemahaman atas distribusi ini penting untuk menyusun strategi portofolio yang seimbang antara saham growth (papan pengembangan/akselerasi) dan saham value (papan utama/harga premium).
+    Berdasarkan analisis dan penggambaran data mengenai saham perusahaan di Indonesia pada 22 Desember 2025, dapat dikatakan bahwa distribusi harga saham di antara perusahaan-perusahaan menunjukkan adanya ketidakmerataan yang cukup jelas. Sebagian kecil dari perusahaan-perusahaan tersebut memiliki harga saham yang tinggi dan bersifat dominan, sementara mayoritasnya terletak pada level harga yang lebih rendah.
+
+Kestabilan antara harga pembukaan dan harga penutupan menunjukkan bahwa suasana pasar pada waktu itu cenderung teratur dan tidak mengalami fluktuasi yang signifikan. Sebaliknya, selisih antara harga tertinggi dan terendah menunjukkan adanya variasi dalam aktivitas perdagangan yang mencerminkan tingkat aktivitas yang berbeda di setiap perusahaan.
+
+Secara keseluruhan, studi ini menunjukkan bahwa visualisasi data saham dapat dimanfaatkan untuk menganalisis pola umum dari aktivitas pasar serta perbedaan spesifik antar perusahaan. Pendekatan yang bersifat deskriptif dan visual ini berhasil memberikan wawasan awal yang berarti tentang situasi harga saham dan dinamika perdagangan, tanpa perlu melakukan analisis teknis yang rumit.
     """
 )
 
@@ -16,7 +20,7 @@ st.write("────────────────────⋆⋅☆�
 
 st.markdown(
     """
-   Kaggle, 2023. https://www.kaggle.com/datasets/muamkh/ihsgstockdata
+   PT Bursa Efek Indonesia https://share.google/Ws2tImhAQsuE7OuM9
     """
 )
 
