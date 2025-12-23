@@ -31,18 +31,34 @@ st.write("────────────────────⋆⋅☆�
 
 st.write("## Tampilan data keseluruhan ")
 
-ticker_symbol = st.selectbox(
-    'Silahkan pilih kode saham',
-    sorted(df_Saham['Kode Saham'].unique())
-)
+
+df_Saham['Kode Saham'] = df_Saham['Kode Saham'].astype(str).str.strip()
+
+kolom_harga = ['Open Price', 'Tertinggi', 'Terendah', 'Penutupan']
+df[kolom_harga] = df_Saham[kolom_harga].apply(pd.to_numeric, errors='coerce')
 
 df_ticker = df_Saham[df_Saham['Kode Saham'] == ticker_symbol].copy()
 
-df_ticker['Observasi'] = df_ticker.index + 1
+st.write("Jumlah data:", len(df_ticker)) 
 
-if st.checkbox('Tampilkan tabel'):
-    st.write(df_ticker.head())
-    st.write(df_ticker.tail())
+df_ticker = df_ticker.reset_index(drop=True)
+df_ticker['Observasi'] = df_ticker.index + 1
+df_melt = df_ticker.melt(
+    id_vars='Observasi',
+    value_vars=pilihan_atribut,
+    var_name='Variabel',
+    value_name='Harga'
+)
+
+grafik = px.line(
+    df_melt,
+    x='Observasi',
+    y='Harga',
+    color='Variabel',
+    title=f"Harga Saham {ticker_symbol}"
+)
+
+st.plotly_chart(grafik, use_container_width=True)
 
 if st.checkbox('Tampilkan grafik'):
     pilihan_atribut = st.multiselect(
@@ -51,12 +67,29 @@ if st.checkbox('Tampilkan grafik'):
     )
 
     if pilihan_atribut:
+        df['Kode Perusahaan'] = df['Kode Perusahaan'].astype(str).str.strip()
+        kolom_harga = ['Open Price', 'Tertinggi', 'Terendah', 'Penutupan']
+        df[kolom_harga] = df[kolom_harga].apply(pd.to_numeric, errors='coerce')
+
+        df_ticker = df[df['Kode Perusahaan'] == ticker_symbol].copy()
+        df_ticker = df_ticker.reset_index(drop=True)
+        df_ticker['Observasi'] = df_ticker.index + 1
+
+        df_melt = df_ticker.melt(
+            id_vars='Observasi',
+            value_vars=pilihan_atribut,
+            var_name='Variabel',
+            value_name='Harga'
+        )
+
         grafik = px.line(
-            df_ticker,
+            df_melt,
             x='Observasi',
-            y=pilihan_atribut,
+            y='Harga',
+            color='Variabel',
             title=f"Harga Saham {ticker_symbol}"
         )
+
         st.plotly_chart(grafik, use_container_width=True)
     else:
-        st.warning("Silakan pilih minimal satu atribut harga.")
+        st.warning("Pilih minimal satu atribut.")
