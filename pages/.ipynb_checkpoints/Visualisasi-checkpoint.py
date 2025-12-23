@@ -2,6 +2,7 @@ import pandas as pd
 import seaborn as sns
 import plotly.express as px
 import streamlit as st
+import yfinance as yf
 from IPython.display import display
 
 df_Saham = pd.read_csv("Ringkasan Saham-20251222.csv", sep=';', on_bad_lines='skip')
@@ -30,38 +31,32 @@ st.write("────────────────────⋆⋅☆�
 
 st.write("## Tampilan data keseluruhan ")
 
-df_Saham = df.reset_index(drop=True)
-df['Observasi'] = df.index + 1
-dropdown_kode = widgets.Dropdown(
-    options=sorted(df['Kode Perusahaan'].unique()),
-    description='Kode Saham:',
-    value=sorted(df['Kode Perusahaan'].unique())[0]
+ticker_symbol = st.selectbox(
+    'Silahkan pilih kode perusahaan:',
+    sorted(df['Kode Perusahaan'].unique())
 )
 
-def plot_multiline_no_date(kode):
-    data = df[df['Kode Perusahaan'] == kode]
+df_ticker = df[df['Kode Perusahaan'] == ticker_symbol].copy()
 
-    nama = data['Nama Perusahaan'].iloc[0]
+df_ticker['Observasi'] = df_ticker.index + 1
 
-    plt.figure(figsize=(14,6))
+if st.checkbox('Tampilkan tabel'):
+    st.write(df_ticker.head())
+    st.write(df_ticker.tail())
 
-    plt.plot(data['Observasi'], data['Open Price'], label='Open Price')
-    plt.plot(data['Observasi'], data['Tertinggi'], label='High')
-    plt.plot(data['Observasi'], data['Terendah'], label='Low')
-    plt.plot(data['Observasi'], data['Penutupan'], label='Close')
+if st.checkbox('Tampilkan grafik'):
+    pilihan_atribut = st.multiselect(
+        'Select pilih atribut yang akan ditampilkan:',
+        ['Open Price', 'Tertinggi', 'Terendah', 'Penutupan']
+    )
 
-    plt.title(f"Perbandingan Harga Saham {nama} ({kode})")
-    plt.xlabel("Urutan Observasi")
-    plt.ylabel("Harga Saham")
-    plt.legend()
-    plt.grid(True)
-
-    plt.show()
-
-interactive_plot = widgets.interactive(
-    plot_multiline_no_date,
-    kode=dropdown_kode
-)
-
-display(interactive_plot)
-
+    if pilihan_atribut:
+        grafik = px.line(
+            df_ticker,
+            x='Observasi',
+            y=pilihan_atribut,
+            title=f"Harga Saham {ticker_symbol}"
+        )
+        st.plotly_chart(grafik, use_container_width=True)
+    else:
+        st.warning("Silakan pilih minimal satu atribut harga.")
