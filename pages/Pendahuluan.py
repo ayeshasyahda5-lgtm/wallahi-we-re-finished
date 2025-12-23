@@ -13,8 +13,17 @@ st.write("### Pendahuluan")
 
 st.markdown(
     """
-    Dalam era saat ini, kemampuan untuk menyajikan data pasar modal yang kompleks menjadi informasi yang mudah dicerna sangatlah penting untuk di pelajari. Proyek tugas ini berfokus pada pengembangan dashboard  berbasis web menggunakan framework Streamlit dan lingkungan Jupyter Lab. Tujuan pyoyek ini adalah melakukan eksplorasi statistik deskriptif terhadap data saham yang ada di Indonesia.
-Data yang digunakan sebagai variabel kunci seperti kode saham, nama emiten, jumlah lembar saham (shares outstanding), papan pencatatan (listing board), serta harga penutupan terakhir (last price). Melalui pendekatan visualisasi data, kita mencoba membedah struktur pasar saham saat ini, mulai dari segmentasi papan pencatatan hingga identifikasi saham-saham dengan valuasi harga tertinggi maupun volume lembar terbanyak. Laporan ini akan menguraikan temuan-temuan yang didapat dari grafik yang telah di-generate oleh sistem.
+    Pasar modal memainkan peran penting dalam perekonomian karena menjadi tempat bertemunya pihak yang membutuhkan dana dengan pihak yang memiliki dana berlebih.
+Selain itu, perubahan harga saham juga bisa menggambarkan kondisi serta performa perusahaan, serta menunjukkan bagaimana pasar bereaksi terhadap informasi ekonomi yang terus berkembang. Karena itu, data saham dapat digunakan sebagai salah satu sarana untuk memahami dinamika kegiatan ekonomi secara keseluruhan.
+
+Penelitian ini dibuat sebagai bagian dari tugas praktikum Big Data dengan pendekatan deskriptif dan visualisasi data, menggunakan data saham dari perusahaan yang terdaftar di Indonesia.
+Dalam penelitian ini, data saham tidak digunakan untuk tujuan pengambilan keputusan investasi, melainkan sebagai bahan analisis untuk mengamati pola serta variasi harga saham di antara perusahaan-perusahaan tersebut. Pendekatan ini bertujuan untuk memahami karakteristik data serta makna informasi yang terkandung di dalamnya.
+
+Tujuan utama dari penelitian ini adalah untuk memberikan gambaran mengenai perbedaan harga saham antar perusahaan di Indonesia, memahami arti dari berbagai indikator harga saham seperti harga pembukaan, penutupan, tertinggi, dan terendah, serta menyajikan data dalam bentuk visual agar lebih mudah dipahami.
+Selain itu, penelitian ini juga bertujuan untuk melatih kemampuan dalam mengolah serta menyajikan data dalam jumlah besar secara terstruktur dan informatif.
+
+Fungsi utama dari penelitian ini adalah sebagai sarana eksplorasi data untuk melihat pola umum pergerakan harga saham antar perusahaan.
+Hasil visualisasi diharapkan dapat membantu memberikan pemahaman awal mengenai kondisi pasar, perbedaan karakteristik perusahaan, serta variasi aktivitas perdagangan yang terjadi.
 
     """
 )

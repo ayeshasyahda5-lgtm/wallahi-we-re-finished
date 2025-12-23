@@ -11,7 +11,7 @@ st.dataframe(df_Saham.tail())
 
 st.write("────────────────────⋆⋅☆⋅⋆────────────────────⋯⋅๑┈•✦")
 
-st.write("## Data Chart Open Price: ")
+st.write("## Data Open Price ")
 fig=px.histogram(
     df_Saham,
     x='Nama Perusahaan',
