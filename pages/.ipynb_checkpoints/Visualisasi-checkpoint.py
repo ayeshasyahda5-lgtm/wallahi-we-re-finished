@@ -32,11 +32,11 @@ st.write("────────────────────⋆⋅☆�
 st.write("## Tampilan data keseluruhan ")
 
 ticker_symbol = st.selectbox(
-    'Silahkan pilih kode perusahaan:',
-    sorted(df['Kode Perusahaan'].unique())
+    'Silahkan pilih kode saham',
+    sorted(df_Saham['Kode Saham'].unique())
 )
 
-df_ticker = df[df['Kode Perusahaan'] == ticker_symbol].copy()
+df_ticker = df_Saham[df_Saham['Kode Saham'] == ticker_symbol].copy()
 
 df_ticker['Observasi'] = df_ticker.index + 1
 
