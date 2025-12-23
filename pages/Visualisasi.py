@@ -2,7 +2,6 @@ import pandas as pd
 import seaborn as sns
 import plotly.express as px
 import streamlit as st
-import ipywidgets as widgets
 from IPython.display import display
 
 df_Saham = pd.read_csv("Ringkasan Saham-20251222.csv", sep=';', on_bad_lines='skip')
@@ -31,7 +30,7 @@ st.write("────────────────────⋆⋅☆�
 
 st.write("## Tampilan data keseluruhan ")
 
-df = df.reset_index(drop=True)
+df_Saham = df.reset_index(drop=True)
 df['Observasi'] = df.index + 1
 dropdown_kode = widgets.Dropdown(
     options=sorted(df['Kode Perusahaan'].unique()),
