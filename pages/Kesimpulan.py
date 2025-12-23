@@ -20,7 +20,7 @@ st.write("────────────────────⋆⋅☆�
 
 st.markdown(
     """
-   PT Bursa Efek Indonesia https://share.google/Ws2tImhAQsuE7OuM9
+   https://www.idx.co.id/id/data-pasar/ringkasan-perdagangan/ringkasan-saham
     """
 )
 
