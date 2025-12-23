@@ -41,21 +41,27 @@ Dataset ini mencakup kurang lebih sekitar 300 perusahaan sebagai sampel, sehingg
 Setiap baris dalam data merepresentasikan satu perusahaan, dengan beberapa variabel yang menunjukkan pergerakan harga saham dalam satu hari perdagangan.
 Variabel-variabel yang digunakan dalam penelitian ini meliputi:
 - Kode Perusahaan
+
 Kode perusahaan adalah identitas unik yang digunakan untuk membedakan satu perusahaan dengan perusahaan lain di pasar saham.
 Variabel ini berfungsi sebagai penanda utama dalam pengolahan dan penyajian data.
 - Nama Perusahaan
+
 Variabel ini menunjukkan nama resmi dari perusahaan yang sahamnya diperdagangkan.
 Informasi ini membantu memudahkan pemahaman hasil analisis serta memberikan konteks terhadap data yang ditampilkan.
 - Open Price (Harga Pembukaan)
+
 Harga pembukaan adalah harga saham pada awal sesi perdagangan.
 Nilai ini mencerminkan kondisi pasar awal dan ekspektasi para pelaku pasar terhadap perusahaan pada hari tersebut.
 - High Price (Harga Tertinggi)
+
 Harga tertinggi menunjukkan nilai tertinggi yang dicapai saham selama sesi perdagangan.
 Variabel ini menggambarkan tingkat permintaan tertinggi terhadap saham perusahaan dalam satu hari.
 - Low Price (Harga Terendah)
+
 Harga terendah adalah nilai terendah yang terjadi selama sesi perdagangan. Rephrase
 Variabel ini mungkin mencerminkan tekanan jual atau ketidakpastian pasar terhadap saham perusahaan.
 - Close Price (Harga Penutupan)
+
 Harga penutupan adalah harga saham pada akhir sesi perdagangan.
 Nilai ini sering digunakan sebagai gambaran posisi terakhir pasar karena merupakan hasil dari interaksi antara permintaan dan penawaran sepanjang hari.
     """
